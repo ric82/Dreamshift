@@ -79,5 +79,5 @@ Assets/Scripts/*.cs
 Assets/Scripts/*.meta
 
 # voy metiendo los que tengo desarrollados
-#!Assets/Scripts/Script1.cs    #ya se puede meter
-#!Assets/Scripts/Script1.meta  #ya se puede meter
+!Assets/Scripts/Entidad.cs
+!Assets/Scripts/Entidad.cs.meta
