@@ -78,6 +78,18 @@ crashlytics-build.properties
 Assets/Scripts/*.cs
 Assets/Scripts/*.meta
 
-# voy metiendo los que tengo desarrollados
+# voy metiendo los scripts que tengo desarrollados
 !Assets/Scripts/Entidad.cs
 !Assets/Scripts/Entidad.cs.meta
+
+
+
+# ingnoro inicialmente el esqueleto de todos las scenes y las incorporare cuando los tenga desarrollados
+Assets/Scenes/*.unity
+Assets/Scenes/*.unity.meta
+
+# voy metiendo las scenes que tengo desarrolladas
+!Assets/Scenes/New Scene.unity
+!Assets/Scenes/New Scene.unity.meta
+
+
