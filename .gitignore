@@ -85,6 +85,10 @@ Assets/Scripts/*.meta
 !Assets/Scripts/Tablero.cs
 !Assets/Scripts/Tablero.cs.meta
 
+!Assets/Scripts/ParpadeoColor.cs
+!Assets/Scripts/ParpadeoColor.cs.meta
+
+
 
 # ingnoro inicialmente el esqueleto de todos las scenes y las incorporare cuando los tenga desarrollados
 Assets/Scenes/*.unity
