@@ -88,6 +88,8 @@ Assets/Scripts/*.meta
 !Assets/Scripts/ParpadeoColor.cs
 !Assets/Scripts/ParpadeoColor.cs.meta
 
+!Assets/Scripts/BaseApariencias.cs
+!Assets/Scripts/BaseApariencias.cs.meta
 
 
 # ingnoro inicialmente el esqueleto de todos las scenes y las incorporare cuando los tenga desarrollados
