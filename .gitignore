@@ -91,6 +91,10 @@ Assets/Scripts/*.meta
 !Assets/Scripts/BaseApariencias.cs
 !Assets/Scripts/BaseApariencias.cs.meta
 
+!Assets/Scripts/Reglas.cs
+!Assets/Scripts/Reglas.cs.meta
+
+
 
 # ingnoro inicialmente el esqueleto de todos las scenes y las incorporare cuando los tenga desarrollados
 Assets/Scenes/*.unity
