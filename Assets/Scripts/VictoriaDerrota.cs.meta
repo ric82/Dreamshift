@@ -1,0 +1,61 @@
+fileFormatVersion: 2
+guid: 9f8c204a342b83f4ea527bb8e0c12201
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - tablero: {instanceID: 0}
+  - reglas: {instanceID: 0}
+  - prefab_lu: {fileID: 1341060074306023224, guid: d1a8ddc7adfea394c9ea174892c772c9, type: 3}
+  - prefab_sandia: {instanceID: 0}
+  - prefab_cohete: {instanceID: 0}
+  - prefab_pulpo: {instanceID: 0}
+  - prefab_caja: {instanceID: 0}
+  - prefab_koala: {instanceID: 0}
+  - prefab_cuervo: {instanceID: 0}
+  - prefab_lodo: {instanceID: 0}
+  - prefab_portal: {instanceID: 0}
+  - prefab_arbol: {instanceID: 0}
+  - prefab_queso: {instanceID: 0}
+  - prefab_tren: {instanceID: 0}
+  - prefab_hueso: {instanceID: 0}
+  - prefab_perro: {instanceID: 0}
+  - texto_lu: {instanceID: 0}
+  - texto_sandia: {instanceID: 0}
+  - texto_cohete: {instanceID: 0}
+  - texto_pulpo: {instanceID: 0}
+  - texto_igual: {instanceID: 0}
+  - texto_tu: {instanceID: 0}
+  - texto_empuja: {instanceID: 0}
+  - texto_meta: {instanceID: 0}
+  - texto_vence: {instanceID: 0}
+  - texto_para: {instanceID: 0}
+  - texto_caja: {instanceID: 0}
+  - texto_y: {instanceID: 0}
+  - texto_no: {instanceID: 0}
+  - texto_vuela: {instanceID: 0}
+  - texto_hunde: {instanceID: 0}
+  - texto_quema: {instanceID: 0}
+  - texto_funde: {instanceID: 0}
+  - texto_rojo: {instanceID: 0}
+  - texto_azul: {instanceID: 0}
+  - texto_mueve: {instanceID: 0}
+  - texto_guarda: {instanceID: 0}
+  - texto_abre: {instanceID: 0}
+  - texto_cierra: {instanceID: 0}
+  - texto_tunel: {instanceID: 0}
+  - texto_texto: {instanceID: 0}
+  - texto_koala: {instanceID: 0}
+  - texto_cuervo: {instanceID: 0}
+  - texto_lodo: {instanceID: 0}
+  - texto_portal: {instanceID: 0}
+  - texto_arbol: {instanceID: 0}
+  - texto_queso: {instanceID: 0}
+  - texto_tren: {instanceID: 0}
+  - texto_hueso: {instanceID: 0}
+  - texto_perro: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
