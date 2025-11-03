@@ -103,6 +103,9 @@ Assets/Scripts/*.meta
 !Assets/Scripts/PilaDeshacer.cs
 !Assets/Scripts/PilaDeshacer.cs.meta
 
+!Assets/Scripts/ControlJuego.cs
+!Assets/Scripts/ControlJuego.cs.meta
+
 
 
 # ingnoro inicialmente el esqueleto de todos las scenes y las incorporare cuando los tenga desarrollados
