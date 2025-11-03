@@ -29,6 +29,8 @@
 
 */
 
+using UnityEngine.SceneManagement;
+
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -286,6 +288,15 @@ public class ControlJuego : MonoBehaviour
             dir_mantenida = Vector2Int.zero;
             tiempo_mantenida = tiempo_repeticion = 0f;
             Debug.Log("has superado el nivel"); //lanzo mensaje
+
+
+            //cargo el hub
+            var escenaHub = EstadoRetornoHub.escena_hub;
+            if (string.IsNullOrEmpty(escenaHub)) escenaHub = "Hub";
+
+            SceneManager.LoadScene(escenaHub);
+            return; // evito seguir procesando tras lanzar el cambio de escena
+
         }
     }
 
