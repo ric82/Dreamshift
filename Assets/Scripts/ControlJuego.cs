@@ -100,8 +100,46 @@ public class ControlJuego : MonoBehaviour
         reconstruir_tu(); //lista de entidades TU
     }
 
+    // pausa
+    bool _pausa_anterior = false;
+
+    void ResetearEstadosInput()
+    {
+        // movimiento (autorepeat)
+        dir_mantenida = Vector2Int.zero;
+        tiempo_mantenida = 0f;
+        tiempo_repeticion = 0f;
+
+        // deshacer (autorepeat)
+        deshacer_mantenido = false;
+        deshacer_tiempo_mantenida = 0f;
+        deshacer_tiempo_repeticion = 0f;
+
+        // esperar (autorepeat)
+        esperar_mantenido = false;
+        esperar_tiempo_mantenida = 0f;
+        esperar_tiempo_repeticion = 0f;
+    }
+
     void Update()
     {
+
+        // pausa bloquea input y limpia estados al entrar/salir
+        if (MenuPausa.esta_pausado)
+        {
+            if (!_pausa_anterior) ResetearEstadosInput(); //ojo,primer frame en pausa
+            _pausa_anterior = true;
+            return;
+        }
+        else if (_pausa_anterior)
+        {
+            //primer frame tras reanudar evita saltos por teclas mantenidas, soluc a incidencia
+            ResetearEstadosInput();
+            _pausa_anterior = false;
+        }
+
+
+
         // si el tablero no está listo, nada que hacer
         if (tablero == null || tablero.rejilla == null) return;
 
