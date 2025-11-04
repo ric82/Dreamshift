@@ -106,6 +106,10 @@ Assets/Scripts/*.meta
 !Assets/Scripts/ControlJuego.cs
 !Assets/Scripts/ControlJuego.cs.meta
 
+!Assets/Scripts/FondoTablero.cs
+!Assets/Scripts/FondoTablero.cs.meta
+
+
 
 
 # ingnoro inicialmente el esqueleto de todos las scenes y las incorporare cuando los tenga desarrollados
