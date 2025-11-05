@@ -109,6 +109,9 @@ Assets/Scripts/*.meta
 !Assets/Scripts/FondoTablero.cs
 !Assets/Scripts/FondoTablero.cs.meta
 
+!Assets/Scripts/IniciadorEscena.cs
+!Assets/Scripts/IniciadorEscena.cs.meta
+
 
 
 
