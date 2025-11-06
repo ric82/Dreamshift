@@ -21,6 +21,28 @@ using UnityEngine;
 
 public class Reglas : MonoBehaviour
 {
+
+    //incidencia sprite movimiento
+
+    [System.Serializable]
+    public struct SpritesDireccion
+    {
+        public Sprite abajo;
+        public Sprite derecha;
+        public Sprite izquierda;
+        public Sprite arriba;
+    }
+
+    [Header("sprites por dirección (objetos animables)")]
+    public SpritesDireccion sprites_lu;
+    public SpritesDireccion sprites_gato;
+    public SpritesDireccion sprites_cohete;
+    public SpritesDireccion sprites_pez;
+    public SpritesDireccion sprites_bicho;
+    public SpritesDireccion sprites_aru;
+
+    //
+
     // colores y parpadeo
     public Color color_rojo = new Color(1f, 0.25f, 0.25f, 1f);
     public Color color_azul = new Color(0.25f, 0.5f, 1f, 1f);
@@ -543,6 +565,50 @@ public class Reglas : MonoBehaviour
                 }
                 e.establecer_objeto(to, sprite);
                 cambio = true;
+
+
+                //incidencia sprite movimiento
+
+                // animación direccional tras transformacion
+                bool debe_animar = !e.es_texto && es_animable(e.objeto);
+                var dir_spr = e.GetComponent<SpritePorDireccion>();
+                var sr_destino = e.GetComponent<SpriteRenderer>() ?? e.GetComponentInChildren<SpriteRenderer>();
+
+                if (debe_animar)
+                {
+                    // asegurar componente
+                    if (!dir_spr) dir_spr = e.gameObject.AddComponent<SpritePorDireccion>();
+                    dir_spr.sr = sr_destino;
+
+                    //asignar sprites desde el pack serializado
+                    var pack = obtener_pack(e.objeto);
+                    dir_spr.sprite_abajo = pack.abajo;
+                    dir_spr.sprite_derecha = pack.derecha;
+                    dir_spr.sprite_izquierda = pack.izquierda;
+                    dir_spr.sprite_arriba = pack.arriba;
+
+                    // si el pack está vacío por error, no mantengo el componente
+                    bool pack_vacio = (pack.abajo == null && pack.derecha == null && pack.izquierda == null && pack.arriba == null);
+                    if (pack_vacio)
+                    {
+                        if (dir_spr) Destroy(dir_spr);
+                    }
+                    else
+                    {
+                        // refresco inmediato para que el sprite coincida con la dirección actual
+                        dir_spr.ForzarRefrescoInmediato();
+                    }
+                }
+                else
+                {
+                    // no debe animar: elimina el componente si existe para que no pisotee sprites
+                    if (dir_spr) Destroy(dir_spr);
+                }
+
+
+                //
+
+
             }
         }
 
@@ -646,4 +712,32 @@ public class Reglas : MonoBehaviour
         var bl = e.GetComponent<ParpadeoColor>();
         if (bl) Destroy(bl);
     }
+
+
+    //incidencia sprite movimiento
+    bool es_animable(Objeto o)
+    {
+        return o == Objeto.LU
+            || o == Objeto.GATO
+            || o == Objeto.COHETE
+            || o == Objeto.PEZ
+            || o == Objeto.BICHO
+            || o == Objeto.ARU;
+    }
+
+    SpritesDireccion obtener_pack(Objeto o)
+    {
+        switch (o)
+        {
+            case Objeto.LU: return sprites_lu;
+            case Objeto.GATO: return sprites_gato;
+            case Objeto.COHETE: return sprites_cohete;
+            case Objeto.PEZ: return sprites_pez;
+            case Objeto.BICHO: return sprites_bicho;
+            case Objeto.ARU: return sprites_aru;
+            default: return new SpritesDireccion(); // todo null
+        }
+    }
+    //
+
 }
