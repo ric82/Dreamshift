@@ -112,6 +112,10 @@ Assets/Scripts/*.meta
 !Assets/Scripts/IniciadorEscena.cs
 !Assets/Scripts/IniciadorEscena.cs.meta
 
+!Assets/Scripts/AjusteCuadricula.cs
+!Assets/Scripts/AjusteCuadricula.cs.meta
+
+
 
 
 
