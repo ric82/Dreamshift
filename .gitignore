@@ -115,6 +115,9 @@ Assets/Scripts/*.meta
 !Assets/Scripts/AjusteCuadricula.cs
 !Assets/Scripts/AjusteCuadricula.cs.meta
 
+!Assets/Scripts/CamaraAjusteTablero.cs
+!Assets/Scripts/CamaraAjusteTablero.cs.meta
+
 
 
 
