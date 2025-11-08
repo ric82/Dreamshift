@@ -118,6 +118,9 @@ Assets/Scripts/*.meta
 !Assets/Scripts/CamaraAjusteTablero.cs
 !Assets/Scripts/CamaraAjusteTablero.cs.meta
 
+!Assets/Scripts/SpritePorDireccion.cs
+!Assets/Scripts/SpritePorDireccion.cs.meta
+
 
 
 
