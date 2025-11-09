@@ -121,6 +121,17 @@ Assets/Scripts/*.meta
 !Assets/Scripts/SpritePorDireccion.cs
 !Assets/Scripts/SpritePorDireccion.cs.meta
 
+!Assets/Scripts/EntradaNivel.cs
+!Assets/Scripts/EntradaNivel.cs.meta
+
+!Assets/Scripts/EstadoRetornoHub.cs
+!Assets/Scripts/EstadoRetornoHub.cs.meta
+
+!Assets/Scripts/HubDeNiveles.cs
+!Assets/Scripts/HubDeNiveles.cs.meta
+
+
+
 
 
 
