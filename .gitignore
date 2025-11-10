@@ -130,6 +130,10 @@ Assets/Scripts/*.meta
 !Assets/Scripts/HubDeNiveles.cs
 !Assets/Scripts/HubDeNiveles.cs.meta
 
+!Assets/Scripts/Titulo.cs
+!Assets/Scripts/Titulo.cs.meta
+
+
 
 
 
@@ -143,5 +147,13 @@ Assets/Scenes/*.unity.meta
 # voy metiendo las scenes que tengo desarrolladas
 !Assets/Scenes/New Scene.unity
 !Assets/Scenes/New Scene.unity.meta
+
+!Assets/Scenes/Hub.unity
+!Assets/Scenes/Hub.unity.meta
+
+!Assets/Scenes/Titulo.unity
+!Assets/Scenes/Titulo.unity.meta
+
+
 
 
