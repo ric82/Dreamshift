@@ -133,6 +133,9 @@ Assets/Scripts/*.meta
 !Assets/Scripts/Titulo.cs
 !Assets/Scripts/Titulo.cs.meta
 
+!Assets/Scripts/MenuPausa.cs
+!Assets/Scripts/MenuPausa.cs.meta
+
 
 
 
