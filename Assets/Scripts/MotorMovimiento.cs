@@ -125,6 +125,8 @@ public class MotorMovimiento : MonoBehaviour
         refrescar_orden_para_celda(origen, null);   //el que se va ya no esta (no debe contar arriba)
         refrescar_orden_para_celda(destino, e);     // el que llega queda arriba en su grupo
 
+        Sonidos.instancia.reproducir_mover(); //sonido de movimiento
+
         return true; //movimiento exitoso
     }
 

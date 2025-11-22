@@ -118,6 +118,8 @@ public class MenuPausa : MonoBehaviour
 
     public void TogglePausa()
     {
+        Sonidos.instancia.reproducir_boton_confirmar(); //sonido abrir/cerrar pausa
+
         esta_pausado = !esta_pausado;
 
         if (canvas_pausa) canvas_pausa.enabled = esta_pausado;
@@ -152,6 +154,7 @@ public class MenuPausa : MonoBehaviour
     //acciones
     void ReiniciarNivel()
     {
+        Sonidos.instancia.reproducir_boton_cancelar(); //sonido selec
         var scn = SceneManager.GetActiveScene().name;
         Time.timeScale = 1f;
         esta_pausado = false;
@@ -161,6 +164,7 @@ public class MenuPausa : MonoBehaviour
     void SalirAlHub()
     {
         // 
+        Sonidos.instancia.reproducir_boton_cancelar(); //sonido selec
         var hub = EstadoRetornoHub.escena_hub;
         if (string.IsNullOrEmpty(hub)) hub = "Hub";
 
@@ -171,6 +175,7 @@ public class MenuPausa : MonoBehaviour
 
     void IrATitulo()
     {
+        Sonidos.instancia.reproducir_boton_cancelar(); //sonido selec
         Time.timeScale = 1f;
         esta_pausado = false;
         SceneManager.LoadScene("Titulo");

@@ -78,6 +78,9 @@ public class HubDeNiveles : MonoBehaviour
             Debug.LogWarning($"[hub] la escena '{entrada.escena_objetivo}' no esta en build");
             return;
         }
+
+        Sonidos.instancia.reproducir_boton_seleccionar(); //sonido entrada de nivel
+
         SceneManager.LoadScene(entrada.escena_objetivo);
     }
 

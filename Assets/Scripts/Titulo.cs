@@ -99,11 +99,13 @@ public class TituloBasico : MonoBehaviour
             Debug.LogWarning("[titulo] la escena de hub no esta en build o el nombre no coincide");
             return;
         }
+        Sonidos.instancia.reproducir_boton_cancelar(); //sonido selec
         SceneManager.LoadScene(escena_hub);
     }
 
     public void salir_del_juego()
     {
+        Sonidos.instancia.reproducir_boton_cancelar(); //sonido selec
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;  // si estoy dentro del editor detengo el Play, sino cierro la aplicacion
 #else

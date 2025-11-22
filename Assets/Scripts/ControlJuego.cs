@@ -310,6 +310,9 @@ public class ControlJuego : MonoBehaviour
                 dir_mantenida = Vector2Int.zero;
                 tiempo_mantenida = tiempo_repeticion = 0f;
                 Debug.Log("derrota (no quedan TU). pulsa Z para deshacer."); //lanzo mensaje
+
+                Sonidos.instancia.reproducir_morir(); //sonido de muerte
+
                 return;
             }
             else
@@ -327,6 +330,7 @@ public class ControlJuego : MonoBehaviour
             tiempo_mantenida = tiempo_repeticion = 0f;
             Debug.Log("has superado el nivel"); //lanzo mensaje
 
+            Sonidos.instancia.reproducir_ganar(); //sonido de victoria
 
             //cargo el hub
             var escenaHub = EstadoRetornoHub.escena_hub;
@@ -387,6 +391,7 @@ public class ControlJuego : MonoBehaviour
         {
             estado_victoria = true;
             Debug.Log("has superado el nivel");
+
         }
     }
 
@@ -415,6 +420,9 @@ public class ControlJuego : MonoBehaviour
             tiempo_mantenida = tiempo_repeticion = 0f;
         }
         if (estado_victoria && !victoria_derrota.comprobar_victoria()) estado_victoria = false;
+
+        Sonidos.instancia.reproducir_undo(); //sonido de victoria
+
     }
 
     // mueve (auto)
