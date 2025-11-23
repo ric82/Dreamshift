@@ -37,6 +37,7 @@ using UnityEngine;
 
 public class ControlJuego : MonoBehaviour
 {
+
     //referencias
     public Tablero tablero;
     public Reglas reglas;
@@ -332,12 +333,84 @@ public class ControlJuego : MonoBehaviour
 
             Sonidos.instancia.reproducir_ganar(); //sonido de victoria
 
+
+            //pruebas animacion victoria
+
+
+            /*
+            // centro del tablero
+            var cx = (tablero.ancho - 1) * 0.5f;
+            var cy = (tablero.alto - 1) * 0.5f;
+
+            Time.timeScale = 1f;  //
+
+            AnimaVictoria.mostrar_sprite(
+                sprite: miSprite,
+                centro_mundo: new Vector3(cx, cy, 0f),
+                escala: 12f,
+                t_entrada: 0.12f,
+                t_pausa: 0.70f,
+                t_salida: 0.35f,
+                padre: tablero.transform,
+                sorting_order: 32000,
+                al_terminar: () => {
+                    var hub = EstadoRetornoHub.escena_hub;
+                    if (string.IsNullOrEmpty(hub)) hub = "Hub";
+                    UnityEngine.SceneManagement.SceneManager.LoadScene(hub);
+                }
+            );
+
+            return;
+            
+            */
+
+
+            var spriteVictoria = Resources.Load<Sprite>("VICTORIA"); //mi mensaje
+            if (spriteVictoria)
+            {
+                var cx = (tablero.ancho - 1) * 0.5f;
+                var cy = (tablero.alto - 1) * 0.5f;
+
+                AnimaVictoria.mostrar_sprite_con_fondo(
+                    sprite: spriteVictoria,
+                    centro_mundo: new Vector3(cx, cy, 0f),
+                    escala: 7.5f,          //que tamaño muestro el mensaje
+                    t_entrada: 0.12f,
+                    t_pausa: 0.70f,
+                    t_salida: 0.35f,
+                    padre: tablero.transform,
+                    sorting_order: 32000,
+                    //opacidad_fondo: 0.55f,       //
+                    opacidad_fondo: 0.85f,       //oscurezco mas para que destaque
+                    tamano_fondo: new Vector2(tablero.ancho, tablero.alto),
+                    al_terminar: () => {
+                        var hub = EstadoRetornoHub.escena_hub;
+                        if (string.IsNullOrEmpty(hub)) hub = "Hub";
+                        UnityEngine.SceneManagement.SceneManager.LoadScene(hub);
+                    }
+                );
+                return;
+            }
+
+
+
+
+
+
+            //
+
+            /*
+
+            Sonidos.instancia.reproducir_ganar(); //sonido de victoria
+
             //cargo el hub
             var escenaHub = EstadoRetornoHub.escena_hub;
             if (string.IsNullOrEmpty(escenaHub)) escenaHub = "Hub";
 
             SceneManager.LoadScene(escenaHub);
             return; // evito seguir procesando tras lanzar el cambio de escena
+
+            */
 
         }
     }

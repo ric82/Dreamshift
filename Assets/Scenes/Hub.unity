@@ -597,7 +597,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b05e25fdcc07ac04a8d06d71d273c014, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  escena_objetivo: Nivel_1
+  escena_objetivo: Nivel_5
   entidad: {fileID: 0}
 --- !u!212 &966427131
 SpriteRenderer:

@@ -4669,6 +4669,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47627141d0c88084b9df64c2551bb72e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  miSprite: {fileID: 21300000, guid: a517dc8faf873d2478d2f15c862327bb, type: 3}
   tablero: {fileID: 1453191120}
   reglas: {fileID: 1453191119}
   motor_movimiento: {fileID: 1453191118}

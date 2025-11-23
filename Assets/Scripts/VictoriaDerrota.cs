@@ -171,6 +171,10 @@ public class VictoriaDerrota : MonoBehaviour
 
                         lista.Remove(abre);
                         lista.Remove(cierra);
+
+                        AnimaDerrota.crear(tablero.transform, c0);
+                        AnimaDerrota.crear(tablero.transform, c1);
+
                     }
                 }
             }
@@ -226,6 +230,10 @@ public class VictoriaDerrota : MonoBehaviour
                         lista.Remove(otro);
                         eliminadas += 2;
                         progreso = true;
+
+                        AnimaDerrota.crear(tablero.transform, cS);
+                        AnimaDerrota.crear(tablero.transform, cO);
+
                     }
                 }
             }
@@ -257,6 +265,9 @@ public class VictoriaDerrota : MonoBehaviour
                         e.celda = new Vector2Int(-999, -999);
                         generar_productos_guarda(e, cE);
                         eliminadas++;
+
+                        AnimaDerrota.crear(tablero.transform, cE);
+
                     }
                 }
             }
@@ -302,12 +313,16 @@ public class VictoriaDerrota : MonoBehaviour
                     }
                     if (matar_aqui)
                     {
+
                         var cE = e.celda;
                         tablero.rejilla[cE.x, cE.y].Remove(e);
                         e.gameObject.SetActive(false);
                         e.celda = new Vector2Int(-999, -999);
                         generar_productos_guarda(e, cE);
                         eliminadas++;
+
+                        AnimaDerrota.crear(tablero.transform, cE);
+
                     }
                 }
             }

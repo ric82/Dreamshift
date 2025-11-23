@@ -14,8 +14,14 @@ public class TituloBasico : MonoBehaviour
     public Button boton_salir;
 
 
+    public Sprite spriteVictoria; // así lo arrastras en el Inspector
+    
+
     void Awake()
     {
+
+        //AnimaVictoria.establecer_sprite_por_defecto(spriteVictoria);
+
         // creo aqui el unico EventSystem persistente
         if (EventSystem.current == null)
         {

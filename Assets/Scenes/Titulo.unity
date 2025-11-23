@@ -226,6 +226,7 @@ MonoBehaviour:
   escena_hub: Hub
   boton_jugar: {fileID: 1406282960}
   boton_salir: {fileID: 1206032539}
+  spriteVictoria: {fileID: 0}
 --- !u!114 &5936135
 MonoBehaviour:
   m_ObjectHideFlags: 0
